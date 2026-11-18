@@ -12,10 +12,13 @@ import dash from './Images/menu.png';
 import analyze from './Images/analytics.png';
 import card from './Images/credit-card.png';
 import darrow from './Images/double-arrow-vertical-symbol.png';
+import prof from './Images/profile.png'
 import Week from './pages/1-week.jsx';
 import OneMonth from './pages/1-month.jsx';
 import ThreeMonth from './pages/3-month.jsx';
 import OneYear from './pages/1-year.jsx';
+import Chart from './pages/linechart.jsx'
+import Pie from "./pages/piechart.jsx"
 
 
 
@@ -75,7 +78,7 @@ function App() {
           <div className='flex items-center gap-4'>
             <img src={searchicon} alt="Search " className='size-8 bg-[#111124] rounded-xl' />
             <img src={noti} alt="Notifications" className='size-8 bg-[#111124] rounded-xl' />
-            <img src="" alt="Profile" className='size-10 bg-[#111124] rounded-full' />
+            <img src={prof} alt="Profile" className='size-10 bg-[#111124] rounded-full' />
           </div>
         </header>
 
@@ -110,21 +113,23 @@ function App() {
             </div>
           </div>
           <div className='flex pt-5 gap-4'>
-            <div className='bg-[#0D0D1C] w-[900px] h-[350px]  rounded-xl'>
+            <div className='bg-[#0D0D1C] w-[900px] h-[400px]  rounded-xl'>
               <div >
-              <h5 className='text-white text-bold pl-5 pt-5'>Cash Flow Overview</h5>
-              <h5 className='text-[#B8B8B8] pl-5'>Income vs Expenses - last 6 months</h5>
-            </div>
-            <div className='flex items-center'>
-            <div className='flex items-center gap-2'>
-              <h5 className='flex items-center gap-2'>Income</h5>
+              <h5 className='text-white text-bold pl-5 pt-5 text-xl'>Cash Flow Overview</h5>
+              <h5 className='text-[#B8B8B8] pl-5 text-sm'>Income vs Expenses - last 6 months</h5>
             </div>
             <div>
-              <h5 className=''>Expenses</h5>
+              <Chart />
             </div>
             </div>
+            <div className='bg-[#0D0D1C] w-[350px] h-[500px]  rounded-xl'>
+              <div className='pl-6 pt-5'>
+                <h5 className='text-white font-bold text-l '>Spending</h5>
+                <span className='text-[#B8B8B8] text-sm'>By category, Jan 2026</span>
+              </div>
+              
+              <Pie />
             </div>
-            <div className='bg-[#0D0D1C] w-[350px] h-[350px]  rounded-xl'></div>
           </div>
             
 

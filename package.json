@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-router": "^8.5.1"
+    "react-router": "^8.5.1",
+    "recharts": "^3.11.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -28,6 +29,7 @@
     "vite": "^6.2.7"
   },
   "allowScripts": {
-    "react-router@8.5.1": true
+    "react-router@8.5.1": true,
+    "recharts@3.11.0": true
   }
 }
